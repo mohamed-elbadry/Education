@@ -1,0 +1,110 @@
+#fb-render {
+    max-height: 582px !important;
+    overflow: auto !important;
+    padding: 10px !important;
+}
+
+.rendered-form .form-group {
+    margin-left: 0px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100px;
+    background: #D5EEE2;
+    border-radius: 30px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.rendered-form label {
+    font-weight: normal;
+    padding-right: 5px;
+}
+
+.rendered-form table {
+    max-width: 282pt !important;
+}
+
+.rendered-form .radio-group {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.radio-group .formbuilder-radio:first-child {
+    margin-left: 40px;
+}
+
+.p-one-4 {
+    font-family: 'Somarreg';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 37px;
+    color: #000000;
+    padding-right: 30px;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    margin-bottom: 0px;
+}
+
+.collect-two {
+    border: 1px solid #E9E9E9;
+    border-radius: 30px;
+    margin-top: 32px;
+    overflow: hidden;
+}
+
+
+.question-3 {
+    border: 1px solid #E9E9E9;
+    border-radius: 0px 0px 30px 30px;
+    -webkit-border-radius: 0px 0px 30px 30px;
+    -moz-border-radius: 0px 0px 30px 30px;
+    -ms-border-radius: 0px 0px 30px 30px;
+    -o-border-radius: 0px 0px 30px 30px;
+    padding-right: 10px !important;
+    position: relative;
+}
+
+.p-div-one {
+    font-family: 'Somarsemibold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 24px;
+    color: #FFFFFF;
+    padding-right: 0px !important;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-bottom: 0px;
+    text-align: center !important;
+}
+
+.formbuilder-radio-group-label label div {
+    max-width: 282pt !important;
+}
+.rendered-form label {
+    font-weight: normal;
+    max-width: 285pt !important;
+    position: relative;
+}
+@media (max-width:441px) {
+    .rendered-form table {
+        max-width: 220pt !important;
+    }
+    .formbuilder-radio-group-label label div {
+        max-width: 220pt !important;
+    }
+    .rendered-form label {
+        font-weight: normal;
+        max-width: 220pt !important;
+    }
+}
+
+@media (max-width:390px) {
+    .rendered-form table {
+        margin-bottom: 10px;
+    }
+}
