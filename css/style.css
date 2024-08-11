@@ -173,10 +173,10 @@ body {
     font-family:
     "Helvetica Neue', sans-serif";
 }
-/* .container{
+.container{
     width: 1000px;
     margin: auto;
-} */
+}
 
 a {
     text-decoration: none;
@@ -225,6 +225,19 @@ svg:hover {
     color: #fff;
 }
 /*----- End uper-nav -----*/
+.text-contact{
+    position: relative;
+    top: 70px;
+    z-index: 1000;
+}
+.text-contact h2{
+    color: #fff !important;
+    font-size: 14px;
+}
+.text-contact a{
+    color: #e0e0e0 !important;
+    font-size: 14px;
+}
 /*-- start setting box --*/
 .seeting-box{
     position: fixed;
@@ -329,7 +342,7 @@ svg:hover {
 /*----- Start nav -----*/
 .fixed-top-nav {
     position: fixed;
-    top: 70px;
+    top: 110px;
     right: 0;
     left: 0;
     z-index: 1030; 
@@ -339,6 +352,8 @@ svg:hover {
     color: #fff!important;
     font-family:
     "HelveticaNeueBold 700";
+    display: block;
+    padding: 5px 0;
 }
 #nav .nav-item .nav-link.active{
     background-color: #018763;
@@ -347,6 +362,7 @@ svg:hover {
     box-shadow: 0px 3px 28px rgb(211 226 234 / 15%), 0 0 0 2px rgb(180 188 208 / 16%);
     background-color: var(--main-color) !important;
     padding-bottom: 20px;
+    top: 53px;
 }
 #nav .work{
     background-color: #f6f7fcae;
@@ -369,9 +385,9 @@ svg:hover {
 .navbar::after{
     content: "";
     position: absolute;
-    bottom: -65px;
-    border: 5px solid #fff;
-    width: 86%;
+    bottom: -50px;
+    border: 3px solid #fff;
+    width: 70%;
     margin-inline: auto;
     left: 48%;
     transform: translateX(-50%);
@@ -391,25 +407,28 @@ svg:hover {
     margin-bottom: 10px;
     padding-top: 0px;
     padding-bottom: 0px;
-    margin-left: 48px;
+    margin-left: 10px;
     position: relative;
     z-index: 1;
     margin-right: 0px;
     max-width: 200px;
+    width: 150px;
 }
 
 .navbar-nav {
     padding-right: 0px;
-    margin-right: 12%;
+    margin-right: 6%;
 }
 
 @media(max-width:991px) {
     .navbar-collapse.collapse.show {
         overflow-y: auto;
         max-height: 60vh;
-        background-color: blue;
+        background-color: #13865E;
         float: right;
         -webkit-overflow-scrolling: touch;
+        z-index: 1;
+        top: 138px;
     }
 
     .navbar-nav {
@@ -422,7 +441,11 @@ svg:hover {
     top: -5px;
     left: -2px;
 }
-
+#nav .nav-item .drop a svg{
+    position: relative;
+    top: -2px;
+    left: 0px;
+}
 .btn-nav svg path:hover{
     stroke: #0000;
 }
@@ -432,8 +455,8 @@ svg:hover {
 
 .nav-item a.nav-link {
     margin-top: 25px;
-    margin-right: 30px;
-    padding: 20px 15px !important;
+    margin-right: 5px;
+    padding: 20px 10px !important;
     border-radius: 5px;
     font-size: 13px !important;
     line-height: 2px;
@@ -449,7 +472,7 @@ svg:hover {
 .show-drop .drop{
     background-color:#1DBB90;
     padding: 10px 5px;
-    width: 150px;
+    width: 230px;
     position: absolute;
     display: none;
     left: 0px;
@@ -460,12 +483,12 @@ svg:hover {
   display: block;
 }
 .nav-item .drop a{
-    font-size: 14px;
+    font-size: 12px;
     color: #fff;
     font-weight: 400;
 }
 .nav-item .drop a:hover{
-    font-size: 14px;
+    font-size: 12px;
     color: #486DF6;
     font-weight: 400;
 }
@@ -596,8 +619,8 @@ svg:hover {
     }
 
     .nav-item a.nav-link {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 5px;
+        margin-bottom: 0px;
         display: inline-block;
         color: #fff;
     }
@@ -624,10 +647,17 @@ svg:hover {
 
     .navbar-collapse.show {
         left: 0;
-        height: 100vh;
-        min-height: 700px;
+        height: 70vh;
+        min-height: 400px;
         top: 0px;
-        padding-top: 70px;
+        padding-top: 10px;
+    }
+    .navbar-toggler svg 
+    {
+        color: #fff;
+    }
+    .show-drop:hover .drop{
+        display: none;
     }
 }
 
@@ -646,22 +676,27 @@ svg:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  }.navbar-collapse.collapse.show
+.swiper .image-order{
+    
+}
 .swiper .swiper-slide .first-side{
     background-color: #DD8B05;
-    padding: 250px 0 0;
+    padding: 300px 0 100px;
     height: 100%;
     min-height: 650px;
+    height: 807px;
     border-bottom: 5px solid #fff;
 }
 .swiper .swiper-slide .side-two{
     background-color: #067857;
-    padding: 250px 0 0;
+    padding: 300px 0 100px;
     min-height: 650px;
+    height: 807px;
 }
 .swiper .swiper-slide .side-three{
     background-color: #007c9c;
-    padding: 250px 0 0;
+    padding: 300px 0 100px;
     min-height: 650px;
 }
 .swiper .swiper-slide .first-side .image .first {
@@ -673,7 +708,8 @@ svg:hover {
     border: none;
 }
 .swiper .swiper-slide .first-side .swipe-text h2{
-    font-size: 35px;
+    font-size: 26px;
+    line-height: 1.5;
     color: #fff;
     margin-bottom: 40px;
     font-family:
@@ -694,7 +730,8 @@ svg:hover {
 }
 .swiper .swiper-slide .first-side .swipe-text button a{
     font-family:
-    "HelveticaNeueLight 300";
+    "HelveticaNeueMedium 500";
+    font-size: 18px;
 }
 .swiper-button-next:after, .swiper-button-prev:after{
     font-size: 20px !important;
