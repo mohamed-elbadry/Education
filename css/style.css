@@ -208,7 +208,7 @@ svg:hover {
 .uper-nav .uper{
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 11px 0;
     align-items: center;
 }
 .uper-nav .logo img{
@@ -225,19 +225,49 @@ svg:hover {
     color: #fff;
 }
 /*----- End uper-nav -----*/
-.text-contact{
+.market{
+    display: flex;
+    justify-content: space-between;
     position: relative;
-    top: 70px;
+    top: 50px;
     z-index: 1000;
 }
 .text-contact h2{
     color: #fff !important;
     font-size: 14px;
+    margin-top: 10px;
 }
 .text-contact a{
     color: #e0e0e0 !important;
     font-size: 14px;
 }
+.market .mark{
+    display: flex;
+    gap: 10px;
+    background: none;
+  }
+  .market .mark .fevor{
+    background: #ffb20e;
+    padding: 0px 16px;
+    border-bottom-left-radius:3px ;
+    border-bottom-right-radius:3px ;
+    border: none !important;
+  }
+  .market .mark .fevor a{
+    font-size: 12px;
+      color: #ffffff;
+  }
+  .market .mark .login{
+    background: #1DBB90;
+    padding: 0px 16px;
+    border-bottom-left-radius:3px ;
+    border-bottom-right-radius:3px ;
+  }
+  .market .mark .login a{
+    text-decoration: none;
+    font-size: 12px;
+    color: #ffffff;
+  }
 /*-- start setting box --*/
 .seeting-box{
     position: fixed;
@@ -339,10 +369,98 @@ svg:hover {
     cursor: pointer;
   }
   /*-- End setting box --*/
+  /* Start Nav Bullets */
+.nav-bullets {
+    position: fixed;
+    right: -8px;
+    top: 22%;
+    transform: translateY(-50%);
+    width: 60px;
+    z-index: 1000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 10000;
+  }
+  
+  .nav-bullets .bullet-icon{
+    background-color: #1DBB90;
+    padding: 10px 15px;
+    transition: all 0.3s linear;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .nav-bullets .bullet-icon::after {
+    content: 'Buy Now';
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    height: 50px;
+    padding-inline: 20px;
+    right: 55px;
+    min-width: 165px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    transition: all 0.3s linear;
+  }
+  .nav-bullets .bullet-icon:nth-of-type(2)::after {
+    content: 'Our BestSELLERS';
+  }
+  .nav-bullets .bullet-icon:nth-of-type(3)::after {
+    content: 'HIDE PANEL';
+  }
+  .nav-bullets .bullet-icon:hover::after {
+    right: 60px;
+    visibility: visible;
+  }
+  
+  .nav-bullets .bullet-icon:hover {
+    transform: translateX(-8px);
+  }
+  .nav-bullets .bullet-icon svg {
+    right: 7px;
+    position: relative;
+}
+
+  /* .nav-bullets .bullet:hover .tooltip {
+    display: block;
+  }
+  .nav-bullets .bullet .tooltip {
+    background-color: var(--main-color);
+    width: 120px;
+    color: #FFF;
+    padding: 8px 10px;
+    position: absolute;
+    right: 32px;
+    top: -10px;
+    text-align: center;
+    cursor: default;
+    pointer-events: none;
+    display: none;
+  } */
+  /* .nav-bullets .bullet .tooltip:before {
+    content: '';
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent transparent transparent var(--main-color);
+    height: 0;
+    width: 0;
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+  } */
+  /* End Nav Bullets */
 /*----- Start nav -----*/
 .fixed-top-nav {
     position: fixed;
-    top: 110px;
+    top: 100px;
     right: 0;
     left: 0;
     z-index: 1030; 
@@ -354,6 +472,9 @@ svg:hover {
     "HelveticaNeueBold 700";
     display: block;
     padding: 5px 0;
+}
+#nav .nav-item a:hover{
+    background-color: #018763;
 }
 #nav .nav-item .nav-link.active{
     background-color: #018763;
@@ -619,10 +740,17 @@ svg:hover {
     }
 
     .nav-item a.nav-link {
-        margin-top: 5px;
+        margin-top: 0px;
         margin-bottom: 0px;
         display: inline-block;
         color: #fff;
+    }
+    #nav .nav-item a {
+        text-transform: uppercase;
+        color: #fff !important;
+        font-family: "HelveticaNeueBold 700";
+        display: block;
+        padding: 5px 0;
     }
     .nav-item a.nav-link span{
         position: absolute;
@@ -646,11 +774,19 @@ svg:hover {
     }
 
     .navbar-collapse.show {
-        left: 0;
-        height: 70vh;
-        min-height: 400px;
-        top: 0px;
-        padding-top: 10px;
+        left: 10px;
+        right: 10px;
+        /* height: 55vh; */
+        /* min-height: 300px; */
+        /* top: 0px; */
+        /* padding-top: 10px; */
+        width: 90%;
+        margin-inline: auto;
+        height: 285px;
+    }
+    .navbar-nav svg{
+        display: none;
+    }
     }
     .navbar-toggler svg 
     {
@@ -659,7 +795,6 @@ svg:hover {
     .show-drop:hover .drop{
         display: none;
     }
-}
 
 /*----- End nav -----*/
 /*----- Start Swiper --------*/
@@ -682,7 +817,7 @@ svg:hover {
 }
 .swiper .swiper-slide .first-side{
     background-color: #DD8B05;
-    padding: 300px 0 100px;
+    padding: 265px 0 100px;
     height: 100%;
     min-height: 650px;
     height: 807px;
@@ -690,13 +825,13 @@ svg:hover {
 }
 .swiper .swiper-slide .side-two{
     background-color: #067857;
-    padding: 300px 0 100px;
+    padding: 265px 0 100px;
     min-height: 650px;
     height: 807px;
 }
 .swiper .swiper-slide .side-three{
     background-color: #007c9c;
-    padding: 300px 0 100px;
+    padding: 265px 0 100px;
     min-height: 650px;
 }
 .swiper .swiper-slide .first-side .image .first {
@@ -1229,6 +1364,7 @@ pricing .content-box-md .row .col-md-4:nth-of-type(2) .pric-box button{
 #testimonial-cars .owl-nav .owl-next:hover{
     background: transparent !important;
 }
+
 /* -----testimonial -----*/
 
 .footer {
@@ -1312,5 +1448,38 @@ font-family:
   }
   .Rights{
     padding: 30px 0;
+  }
+
+
+.progress-wrap {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    display: block;
+    border-radius: 10px;
+    background-color: #1DBB90;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -4px 3px 0px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+  .progress-wrap svg path {
+    fill: #f8f8f8;
+  }
+  
+  .progress-wrap svg.progress-circle path {
+    stroke: #388B9F;
+    stroke-width: 4;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  .progress-wrap.active-progress {
+    display: flex;
+    justify-content: center;
   }
 

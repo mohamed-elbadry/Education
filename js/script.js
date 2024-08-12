@@ -87,14 +87,98 @@ if (mainColors !== null) {
   });
 
 }
+
+let bulletsSpan = document.querySelectorAll(".bullets-option span");
+
+let bulletsContainer = document.querySelector(".nav-bullets");
+
+let bulletLocalItem = localStorage.getItem("bullets_option");
+
+
+if (bulletLocalItem !== null) {
+
+  bulletsSpan.forEach(span => {
+   
+    span.classList.remove("active");
+
+  });
+
+  if (bulletLocalItem === 'block'){
+
+    bulletsContainer.style.display = 'block';
+
+    document.querySelector(".bullets-option .yes").classList.add("active");
+
+  } else {
+
+    bulletsContainer.style.display = 'none';
+    document.querySelector(".bullets-option .no").classList.add("active");
+  }
+
+}
+
+
+bulletsSpan.forEach(span => {
+
+  span.addEventListener("click", (e) => {
+
+    if (span.dataset.display === 'show') {
+
+      bulletsContainer.style.display = 'block';
+
+
+      localStorage.setItem("bullets_option", 'block');
+
+
+    } else {
+
+      bulletsContainer.style.display = 'none';
+
+
+      localStorage.setItem("bullets_option", 'none');
+
+
+
+
+    }
+     handleActive(e);
+
+  });
+
+});
+ // Get the progress-wrap element
+ const progressWrap = document.querySelector('.progress-wrap');
+
+ // Add a click event listener to the progress-wrap
+ progressWrap.addEventListener('click', () => {
+   // Scroll to the top of the page
+   window.scrollTo({
+     top: 0,
+     behavior: 'smooth'
+   });
+ });
+
+ // Show the progress-wrap when the user scrolls down
+ window.addEventListener('scroll', () => {
+   if (window.pageYOffset > 100) {
+     progressWrap.classList.add('active-progress');
+   } else {
+     progressWrap.classList.remove('active-progress');
+   }
+ });
 })
+
+
+
+
+
 
 var swiper = new Swiper(".mySwiper", {
     cssMode: true,
-    // autoplay: {
-    //   delay: 2000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -156,10 +240,13 @@ $('#testimonial-cars').owlCarousel({
   margin:10,
   nav:true,
   dots:true,
+  dotsEach:1,
+   slideBy: 1,
   navText:[
     `<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="#fff" d="M17.59 18L19 16.59L14.42 12L19 7.41L17.59 6l-6 6z"/><path fill="#fff" d="m11 18l1.41-1.41L7.83 12l4.58-4.59L11 6l-6 6z"/></svg>`,
     `<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="#fff" d="M6.41 6L5 7.41L9.58 12L5 16.59L6.41 18l6-6z"/><path fill="#fff" d="m13 6l-1.41 1.41L16.17 12l-4.58 4.59L13 18l6-6z"/></svg>`
   ],
+  
   responsive:{
       0:{
           items:1
@@ -172,6 +259,8 @@ $('#testimonial-cars').owlCarousel({
       }
   }
 })
+
+
 const myElement = document.getElementById('nav');
 
 window.addEventListener('scroll', function() {

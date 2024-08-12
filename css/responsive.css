@@ -15,6 +15,9 @@
     .swiper .swiper-slide .image img{
         border-radius: 20px;
         max-width: 350px;
+        position: relative;
+        bottom: -55px;
+        margin-inline: auto;
     }
    
     .swiper .swiper-slide .first-side {
@@ -48,9 +51,49 @@
         left: 0;
         z-index: 1030;
     }
+    #nav .nav-item a:hover {
+        background-color: #018763;
+    }
+    #nav .nav-item a {
+        text-transform: uppercase;
+        color: #fff !important;
+        font-family:
+        "HelveticaNeueBlackItalic 900";
+        display: block;
+        padding: 5px 0;
+        font-size: 20px;
+    }
+    .navbar-toggler {
+        padding: 5px 15px 10px 15px !important;
+        font-size: 1.25rem;
+        line-height: 1;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: .25rem;
+        transition: box-shadow .15s ease-in-out;
+        margin-bottom: -45px;
+        margin-right: 35px;
+    }
+    .nav-bullets {
+        position: fixed;
+        right: -8px;
+        top: 19%;
+        transform: translateY(-50%);
+        width: 60px;
+        z-index: 1000;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        z-index: 10000;
+    }
+    .market .mark{
+        display: none;
+    }
     .swiper .image-order{
         order: -1;
         position: relative;
+        bottom: -55px;
     }
     .swiper .swiper-slide .first-side .swipe-text{
         text-align: center;
@@ -70,7 +113,7 @@
     }
     .swiper-button-next, .swiper-button-prev {
         position: absolute;
-        top: var(--swiper-navigation-top-offset, 35%);
+        top: var(--swiper-navigation-top-offset, 39%);
         width: calc(var(--swiper-navigation-size) / 44* 27);
         height: var(--swiper-navigation-size);
         margin-top: calc(0px -(var(--swiper-navigation-size) / 2));
@@ -117,6 +160,7 @@
     }
     .navbar-brand img{
         margin-top: 30px;
+        width: 230px;
     }
     .training .our-video{
         text-align: center;
