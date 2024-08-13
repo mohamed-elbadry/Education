@@ -1384,7 +1384,9 @@ pricing .content-box-md .row .col-md-4:nth-of-type(2) .pric-box button{
     border: 5px solid #fff;
 }
 .testimonial .testi-text p{
-
+    font-family:
+    "HelveticaNeueLight 300";
+    margin-top: 10px;
 }
 #testimonial-cars{
     position: relative;
