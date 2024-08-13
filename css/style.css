@@ -567,6 +567,10 @@ svg:hover {
     top: -2px;
     left: 0px;
 }
+#nav .nav-item .drop a .arrow svg{
+    float: right;
+    top: -27px;
+}
 .btn-nav svg path:hover{
     stroke: #0000;
 }
@@ -599,6 +603,20 @@ svg:hover {
     left: 0px;
     border-radius: 5px;
     z-index: 3;
+}
+.show-drop .drop .drop-list{
+    background-color: #1DBB90;
+    padding: 10px 5px;
+    width: 230px;
+    position: absolute;
+    display: none;
+    left: 233px;
+    border-radius: 5px;
+    z-index: 3;
+    top: 0px;
+} 
+.show-drop .drop li:hover .drop-list {
+    display: block;
 }
 .show-drop:hover .drop{
   display: block;
@@ -787,7 +805,6 @@ svg:hover {
     .navbar-nav svg{
         display: none;
     }
-    }
     .navbar-toggler svg 
     {
         color: #fff;
@@ -795,6 +812,8 @@ svg:hover {
     .show-drop:hover .drop{
         display: none;
     }
+    }
+   
 
 /*----- End nav -----*/
 /*----- Start Swiper --------*/
@@ -834,6 +853,9 @@ svg:hover {
     padding: 265px 0 100px;
     min-height: 650px;
 }
+.swiper .swiper-slide .side-two .image img{
+    width: 450px;
+}
 .swiper .swiper-slide .first-side .image .first {
     border-radius: 20px;
     border: 10px solid #fff;
@@ -843,7 +865,7 @@ svg:hover {
     border: none;
 }
 .swiper .swiper-slide .first-side .swipe-text h2{
-    font-size: 26px;
+    font-size: 25px;
     line-height: 1.5;
     color: #fff;
     margin-bottom: 40px;
@@ -957,14 +979,16 @@ svg:hover {
 }
 .courses .card .overlay {
     position: absolute;
+    top: 0;
     left: 0;
-    bottom: 0;
     width: 100%;
-    height: 0;
+    height: 100%;
     background-color: #1EAACE;
     color: white;
     transition: all 0.3s linear;
     z-index: 3;
+    transform: translateX(-100%) translateY(-100%);
+    padding: 20px;
   }
   .courses .row .col-12:nth-of-type(2) .card .overlay {
     background-color: var(--main-color);
@@ -1002,11 +1026,33 @@ svg:hover {
 .courses .row .col-12:nth-of-type(5) .card .card-footer span{
     color: #ffb20e;
 }
-  .courses .card:hover .overlay {
+.courses .card .overlay.show {
+    opacity: 1;
+    transform: translateX(0) translateY(0) !important;
+  }
+  
+  .courses .card .overlay--top-left {
+    transform: translateX(-100%) translateY(-100%) !important;
+  }
+  
+  .courses .card .overlay--top-right {
+    transform: translateX(100%) translateY(-100%) !important;
+  }
+  
+  .courses .card .overlay--bottom-left {
+    transform: translateX(-100%) translateY(100%) !important;
+  }
+  
+  .courses .card .overlay--bottom-right {
+    transform: translateX(100%) translateY(100%) !important;
+  }
+  /* .courses .card:hover .overlay {
     height: 100%;
     top: 0;
     padding: 20px;
-  }
+    opacity: 1;
+  transform: translateX(0) translateY(0);
+  } */
 .courses .card .overlay h2{
     font-size: 22px;
     margin-bottom: 30px;
@@ -1081,6 +1127,9 @@ svg:hover {
 }
 .courses button a {
     color: #fff;
+}
+.courses button a svg{
+    margin-inline: 10px;
 }
 .courses button:hover {
     background-color: #FFB20E;
@@ -1192,8 +1241,11 @@ svg:hover {
     transform: rotate(35deg) skewX(-20deg);
 }
 .pricing .horizontal-heading h2{
-    color: #666;
-    font-size: 18px;
+    color: #222;
+    font-size: 3em;
+    padding: 10px 0;
+    font-family:
+    "HelveticaNeueThin 100";
 }
 .pricing .pric-box{
     height: 100%;
